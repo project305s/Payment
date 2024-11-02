@@ -13,7 +13,7 @@ public class PresentationLayer {
     DataLayer DataLayer = new DataLayer();
     BusinessLayer BusinessLayer = new BusinessLayer(DataLayer);
     // Simulate a user making a payment
-    Payment payment = new Payment("user123", 25.0, "credit card");
+    Payment payment = new Payment("user123", 30.0, "credit card");
     BusinessLayer.processPayment(payment); // Process the payment through the business layer
     }
     }
