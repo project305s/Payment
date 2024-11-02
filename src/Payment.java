@@ -12,7 +12,7 @@ private final String method;
 /**
 * Constructs a Payment instance with specified user ID, amount, and
 method.
-* @param userId The ID of the user making the payment.
+*   The ID of the user making the payment.
 * @param amount The amount to be paid.
 * @param method The method of payment (e.g., credit card, PayPal).
 */
