@@ -19,11 +19,11 @@ public class BusinessLayer {
     /**
     * Processes a payment by validating it and saving it to the
     repository if valid.
-    *  The payment to be processed.
-    */
+
+*/
     public void processPayment(Payment payment) {
     // Validate payment details before saving
-    if (validatePayment(payment)) { DataLayer.savePayment(payment); // Save to repositoryif valid
+    if (validatePayment(payment)) { DataLayer.savePayment(payment); // Save to repository if valid
     System.out.println("Payment processed successfully.");
     } else {
     System.out.println("Payment validation failed.");
