@@ -33,8 +33,6 @@ public class BusinessLayer {
     * Validates the payment details to ensure they are correct.
     * Basic checks include non-zero payment amount and non-null payment
     method.
-    * The payment to be validated.
-    * true if the payment is valid; false otherwise.
     */
     private boolean validatePayment(Payment payment) {
     // Basic validation checks

@@ -1,6 +1,6 @@
-// Payment.java
+
 /*
-* Model class representing a payment entity in the Online Library System.
+* Payment class representing a payment entity in the Online Library System.
 *
 * This class encapsulates the details of a payment transaction, including
 * the user making the payment, the amount, and the payment method.
@@ -29,7 +29,7 @@ return amount;
 public String getMethod() {
 return method;
 }
-@Override
+
 public String toString() {
 return "Payment{userId='" + userId + "', amount=" + amount + ", method='" + method + "'}";
 }
