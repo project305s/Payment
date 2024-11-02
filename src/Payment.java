@@ -1,5 +1,5 @@
 // Payment.java
-/**
+/*
 * Model class representing a payment entity in the Online Library System.
 *
 * This class encapsulates the details of a payment transaction, including
