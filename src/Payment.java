@@ -1,6 +1,6 @@
 // Payment.java
 
-/**
+/*
  * Model class representing a payment in the Online Library System.
  */
 public class Payment {

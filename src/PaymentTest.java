@@ -24,5 +24,4 @@ public class PaymentTest {
     @Test
     public void testToString() {
 
-    }
-}
+    }}
