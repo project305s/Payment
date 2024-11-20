@@ -1,4 +1,8 @@
-/**
+// BusinessLayer.java
+
+import java.util.List;
+
+/*
 * This Business Layer for the Online Library System's Payment Use Case.
 
 * This class is responsible for handling the business logic of payment
@@ -8,34 +12,28 @@ layer.
 */
 public class BusinessLayer {
     private final DataLayer DataLayer;
-    /**
-    * Constructs a BusinessLayer with a specified repository.
-    * The repository to manage payment data.
-    */
-    public BusinessLayer(DataLayer DataLayer) 
-    {
-    this.DataLayer = DataLayer;
-    }
-    /**
-    * Processes a payment by validating it and saving it to the
-    repository if valid.
 
-*/
+    public BusinessLayer(DataLayer DataLayer) {
+        this.DataLayer = DataLayer;
+    }
+
     public void processPayment(Payment payment) {
-    // Validate payment details before saving
-    if (validatePayment(payment)) { DataLayer.savePayment(payment); // Save to repository if valid
-    System.out.println("Payment processed successfully.");
-    } else {
-    System.out.println("Payment validation failed.");
+        if (DataLayer.savePayment(payment)) {
+            System.out.println("Payment processed successfully: " + payment.getTransactionId());
+        } else {
+            System.out.println("Failed to process payment. Transaction ID already exists: " + payment.getTransactionId());
+        }
     }
+
+    public Payment getPaymentDetails(String transactionId) {
+        return DataLayer.getPaymentById(transactionId);
     }
+
     /**
-    * Validates the payment details to ensure they are correct.
-    * Basic checks include non-zero payment amount and non-null payment
-    method.
-    */
-    private boolean validatePayment(Payment payment) {
-    // Basic validation checks
-    return payment.getAmount() > 0 && payment.getMethod() != null;
+     * Retrieves all stored payments.
+     * @return A list of all payments.
+     */
+    public List<Payment> getAllPayments() {
+        return DataLayer.getAllPayments();
     }
-    }
+}
